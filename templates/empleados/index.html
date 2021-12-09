@@ -1,3 +1,9 @@
+{% include 'header.html' %}
+<br>
+<a class="btn btn-primary" href="{{url_for('create')}}"> Ingresar Nuevo</a>
+<br>
+<br>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,6 +13,34 @@
     <title>Inicio</title>
 </head>
 <body>
-    <h1>Anda</h1>
+   
+   <table class="table table-light">
+       <thead class="thead-light">
+           <tr>
+               <th>#</th>
+               <th>Nombre</th>
+               <th>Correo</th>
+               <th>Foto</th>
+               <th>Acciones</th>
+           </tr>
+       </thead>
+       <tbody>
+           {% for empleado in empleados %}
+           <tr>
+               <td>
+                    <img class="img-thumbnail" width="150" src="/uploads/{{ empleado[3] }}" alt="">
+               </td>
+               <td>{{ empleado[0] }}</td>
+               <td>{{ empleado[1] }}</td>
+               <td>{{ empleado[2] }}</td>
+               <td>
+                   <a class="btn btn-warning" href="/edit/{{empleado[0]}}">Editar</a> |
+                   <a onclick="return confirm('Se va a borrar el registro completo, ¿Desea continuar?')" class="btn btn-danger" href="/destroy/{{empleado[0]}}">Borrar</a>
+               </td>
+           </tr>
+           {% endfor %}
+       </tbody>
+   </table>
 </body>
 </html>
+{% include 'footer.html' %}

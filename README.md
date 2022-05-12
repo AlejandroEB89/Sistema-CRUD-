@@ -1,8 +1,8 @@
 
 
-# -Sistema de Clientes- CRUD 
+# -Sistema de Empleados- CRUD 
 
-Sencillo sistema de gestión de clientes realizado con **Python, Flask, MySQL -- HTML, CSS , JS.**
+Sencillo sistema de gestión de clientes realizado con **Python, Flask, MySQL, Bootstrap
 
-> Trabajo propuesto en el Curso Completo de Pyhon de Lucas Moy 
+> Trabajo realizado en el Curso **FullStack con Python - Codo a codo 4.0**
 
